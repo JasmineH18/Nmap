@@ -1,20 +1,28 @@
 I've already practiced Nmap in Tryhackme (https://tryhackme.com/room/furthernmap) and will do this project on Kali Linux virtual machine from VirtualBox. Below are the resources and environments I'm using.
 
 Resources Used:
--https://www.virtualbox.org/wiki/Downloads
--https://www.kali.org/get-kali/#kali-platforms
 -Networkchuck https://www.youtube.com/watch?v=4t4kBkMsDbQ
 -https://nmap.org/book/man.html
 
-Environments Used:
--Kali Linux in Virtualbox
+This information will be on how TCP scan works in nmap.
 
-Started Kali Linux virtual machine and opened Nmap. This project will be on how TCP scanning works in nmap.
+TCP Connect Scans (-sT) also known as full open scan uses a three-way handshake.
 
-Opened an extra for nmap manual. This will list all the commands I can use and the description for it. Screenshot https://imgur.com/mBIUIob
-In the terminal:
-man nmap
+TCP is short for Transmission Control Protocol. TCP is a communication protocol that starts a conversation with another device. The conversation is the three-way handshake. 
 
-Another option for shorten information as a guide. Screenshot https://imgur.com/tsVmjxz 
-In the terminal:
-nmap --help
+Nmap uses this process when scanning for open ports.
+
+There are three stages to three-way handshake.
+
+Stage 1: SYN short for synchronize
+Device 1 wants to start a conversation with Device 2. Device 1 would ask Device 2 are you there in port 443?. This where SYN starts.
+
+Stage 2: SYN/ACK short for synchronize/acknowledge
+Device 2 would send a SYN/ACK to Device 1 to let it know it received it's message and ready to talk.
+
+Stage 3: ACK short for acknowledge
+Device 1 would send an ACK to talk
+
+
+
+
