@@ -69,14 +69,13 @@ Examples: https://imgur.com/VlS4pQZ ,https://imgur.com/dQ2PSvL
 45.33.32.67 show port 80 is open
 45.33.32.68 show port 80 is filtered.
 
-From nmap reference guide
-open: 'open' means that an application on the target machine is listening for connections/packets on that port.
+open: An open port means that the target system is actively accepting connections on that specific port. This could indicate that a service or application is running and accessible on that port.
 
-filtered: 'filtered' means that a firewall, filter, or other network obstacle is blocking the port so that Nmap cannot tell whether it is open or closed.
+filtered: A filtered port means that Nmap was unable to determine whether the port is open or closed due to filtering mechanisms such as firewalls or access control lists. This could indicate that the port is being protected and not directly accessible.
 
-closed: 'closed' ports have no application listening on them, though they could open up at any time.
+closed: A closed port, on the other hand, means that the target system actively responded with a TCP RST packet, indicating that no service is listening on that port.
 
-unfiltered: Ports are classified as 'unfiltered' when they are responsive to Nmap's probes, but Nmap cannot determine whether they are open or closed.
+unfiltered: An unfiltered port means that Nmap was able to determine that the port is neither open nor closed, suggesting that the port is accessible but not actively accepting connections.
 
 
 
