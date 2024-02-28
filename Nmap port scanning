@@ -73,7 +73,7 @@ open: An open port means that the target system is actively accepting connection
 
 filtered: A filtered port means that Nmap was unable to determine whether the port is open or closed due to filtering mechanisms such as firewalls or access control lists. This could indicate that the port is being protected and not directly accessible.
 
-closed: A closed port, on the other hand, means that the target system actively responded with a TCP RST packet, indicating that no service is listening on that port.
+closed: A closed port means that the target system actively responded with a TCP RST packet, indicating that no service is listening on that port.
 
 unfiltered: An unfiltered port means that Nmap was able to determine that the port is neither open nor closed, suggesting that the port is accessible but not actively accepting connections.
 
