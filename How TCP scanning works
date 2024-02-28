@@ -15,13 +15,42 @@ Nmap uses this process when scanning for open ports.
 There are three stages to three-way handshake.
 
 Stage 1: SYN short for synchronize
-Device 1 wants to start a conversation with Device 2. Device 1 would ask Device 2 are you there in port 443?. This where SYN starts.
+Device 1 wants to start a conversation with Device 2. Device 1 would ask Device 2 are you there in port 443 with a SYN flag. This where SYN starts.
 
 Stage 2: SYN/ACK short for synchronize/acknowledge
-Device 2 would send a SYN/ACK to Device 1 to let it know it received it's message and ready to talk.
+Device 2 would send a SYN/ACK flag to Device 1 to let it know it received it's message and ready to talk.
 
 Stage 3: ACK short for acknowledge
-Device 1 would send an ACK to talk
+Device 1 would send an ACK flag to talk.
+
+
+If a port is closed?
+Device 1 wants to start a conversation with Device 2. Device 1 would ask Device 2 are you there in port 443 with a SYN flag. This where SYN starts.
+
+Device 2 port 443 is closed, so the device server will respond wiith a RST flag.
+
+This means port 443 is closed.
+
+RST short for reset. It means the connection is terminated.
+
+
+What if the port is not closed?
+Device 1 wants to start a conversation with Device 2. Device 1 would ask Device 2 are you there in port 443 with a SYN flag. This where SYN starts.
+
+Device 1 did not received a response. 
+
+It means Device 2 is hidden behind a firewall or access crontrol lists. The firewall is configured to drop incoming packets. 
+
+This means the port is filtered.
+
+
+A firewall can be configure to respond with a RST flag.
+Device 1 wants to start a conversation with Device 2. Device 1 would ask Device 2 are you there in port 443 with a SYN flag. This where SYN starts.
+
+Device 2 responded to Device 1 with a RST flag.
+
+This means the port is filtered.
+
 
 
 
