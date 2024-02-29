@@ -61,7 +61,7 @@ I check all the devices to see if a webserver is up and running.
 In the terminal:
 sudo nmap -sT -p 80, 443 45.33.32.156/24
 
--sT is a TCP connect scan.
+-sT is a TCP connect scan. It's a full open scan.
 -p will only scan specified ports.
 
 Examples: https://imgur.com/VlS4pQZ ,https://imgur.com/dQ2PSvL
