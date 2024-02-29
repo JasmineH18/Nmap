@@ -19,7 +19,7 @@ Another option for shorten information as a guide. Screenshot https://imgur.com/
 In the terminal:
 nmap --help
 
-Check for live systems.
+Checked for live systems.
 
 I will be using one of Nmap's IP address that is allowed to be used. From Nmap reference guide in the description section, I'll be using Example 15.1 to get an IP address to use. Start with scanning 'scanme.nmap.org'.  
 
