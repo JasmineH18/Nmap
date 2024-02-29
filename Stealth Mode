@@ -1,1 +1,34 @@
+Resources Used:
+-https://www.virtualbox.org/wiki/Downloads
+-https://www.kali.org/get-kali/#kali-platforms
+-Networkchuck https://www.youtube.com/watch?v=4t4kBkMsDbQ
+-https://nmap.org/book/man.html
+
+Environments Used:
+-Kali Linux in Virtualbox
+
+Started Kali Linux virtual machine and opened Nmap. This project will be stealth mode scan using Nmap.
+
+Opened an extra for nmap manual. This will list all the commands I can use and the description for it. Screenshot https://imgur.com/mBIUIob
+In the terminal:
+man nmap
+
+Another option for shorten information as a guide. Screenshot https://imgur.com/tsVmjxz 
+In the terminal:
+nmap --help
+
+SYN Scan (-sS) are known as stealth scanning and half open scans. Used in network reconnaissance. It's used to gather information from a target systems without alerting the targets network Intrusion Detection Systems. When the stealth scan starts it will terminate the three-way connection after the SYN/ACK flag is sent. the target Firewalls and access control list will not be alerted. 
+
+Example: 
+Device 20 will send a SYN flag to a web server as it wants to start a connection.
+
+If the port is open, the web server will send a SYN/ACK flag to Device 20.
+
+Device 20 will not complete the TCP connection, which will not complete the three-way handshake.
+
+In the terminal:
+Sudo nmap -sS -p 80,443,22,143,21 45.33.32.156/24 -v
+
+It can the entire network and the firewall was not alerted.
+Screenshots: 
 
