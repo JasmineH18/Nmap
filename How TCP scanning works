@@ -6,7 +6,7 @@ Resources Used:
 
 This information will be on how TCP scan works in nmap.
 
-TCP Connect Scans (-sT) also known as full open scan uses a three-way handshake.
+TCP Connect Scans (-sT) are known as full open scan uses a three-way handshake.
 
 TCP is short for Transmission Control Protocol. TCP is a communication protocol that starts a conversation with another device. The conversation is the three-way handshake. 
 
