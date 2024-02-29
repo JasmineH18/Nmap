@@ -11,20 +11,28 @@ Environments Used:
 
 Started Kali Linux virtual machine and opened Nmap and Wireshark. This project will be on analyzing the port scan with Wireshark.
 
+TCP Connect Scan
 I'll do a full open scan, but will not specify a port. By default, it'll scan the top 1000 ports or popular ports. Only scanning one network. 
 
 In the terminal:
-Sudo nmap -sT 45.33.32.156 -v
+sudo nmap -sT 45.33.32.156 -v
 
 Screenshot: https://imgur.com/TX63Qng
 
 I'll run the scan again with Wireshark. In Wireshark, clicked the shark fin icon to start the capture. Hovering over it with the mouse will show 'Start capturing packets'. 
 
-The packets will start to show in Wireshark. In displayed filtered, types ip.addr == 45.33.32.156
+The packets will start to show in Wireshark. In displayed filtered, types ip.addr == 45.33.32.156. You can see the source IP, Destination IP, port number, SYN/ACK, and other details.
 
-Screenshot: https://imgur.com/WsGCkVG
+Screenshots: https://imgur.com/QfMRF5r, https://imgur.com/2ibZEs8
 
 
+Stealth Scan
+I'll do a half scan without the port number and scanning one network. Wireshark will capture the packets.
+
+In the terminal:
+sudo nmap -sS 45.33.32.156 -v
+
+Screenshots: https://imgur.com/XkLxnRh,
 
 
 
