@@ -32,8 +32,11 @@ I'll do a half scan without the port number and scanning one network. Wireshark 
 In the terminal:
 sudo nmap -sS 45.33.32.156 -v
 
-Screenshots: https://imgur.com/XkLxnRh,
+Screenshot: https://imgur.com/XkLxnRh
 
+Adjusted the filter to show TCP conversation. Right clicked a packet > 'Conversation Filter' > 'TCP'
+You can see the source IP, Destination IP, port number, SYN/ACK, and other details. It does not complete the TCP connection
 
+Screenshots: https://imgur.com/80iGUs5, https://imgur.com/NF9w5pr
 
 
