@@ -77,7 +77,7 @@ closed: A closed port means that the target system actively responded with a TCP
 
 unfiltered: An unfiltered port means that Nmap was able to determine that the port is neither open nor closed, suggesting that the port is accessible but not actively accepting connections.
 
-
+Tip: It is best to use (-v) in Nmap. '-v' is verbose mode and it means increased verbosity level. It provides more details about the scanning process.
 
 
 
