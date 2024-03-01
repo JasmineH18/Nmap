@@ -17,12 +17,12 @@ Another option for shorten information as a guide. Screenshot https://imgur.com/
 In the terminal:
 nmap --help
 
-NSE is short for Nmap Scripting Engine. NSE Scripts are written in the Lua programming language. It allows you to write and share scripts to automate a wide variety of networking tasks. You can scan for vulnerabilities, vulnerability exploitation, Network discovery, and other things. 
+NSE is short for Nmap Scripting Engine and is a very powerful feature. NSE Scripts are written in the Lua programming language. It allows you to write and share scripts to automate a wide variety of networking tasks. You can scan for vulnerabilities, vulnerability exploitation, Network discovery, and other things. 
 
 NOTE: It's advisable to never run scripts from a third party, unless you trust the authors. Scripts are not run in a sandbox.
 
-
-
+In the terminal: 
+sudo nmap --scripts vuln 
 
 
 
