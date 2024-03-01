@@ -16,3 +16,7 @@ man nmap
 Another option for shorten information as a guide. Screenshot https://imgur.com/tsVmjxz 
 In the terminal:
 nmap --help
+
+You can use a decoy to avoid being found while scanning the network and it is called obfuscation.
+
+
