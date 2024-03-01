@@ -19,6 +19,13 @@ Another option for shorten information as a guide. Screenshot https://imgur.com/
 In the terminal:
 nmap --help
 
+-A is short for Aggressive and it will enable aggressive scanning. It will enable OS detection, show versions of protocols, do script scanning, and taceroute.
 
+In the terminal:
+sudo nmap -A 45.33.32.156 -v
+
+It pinged the host to check if it's active. Checked for open ports using TCP three-way handshake, but it's doing a stealth scan. It showed the ssh host key and the version I am using. Also show we are using Apache and using Ubuntu with protocol 2.0. It completed the traceroute to see how many hops it takes.
+
+Screenshots: https://imgur.com/ns7VPRK, https://imgur.com/jh7yUiD
 
 
