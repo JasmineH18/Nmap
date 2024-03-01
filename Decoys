@@ -22,7 +22,7 @@ nmap --help
 Example:
 sudo nmap -sS -D 192.2.1.60 45.33.32.156
 
-I used -sS to do a stealth scan. -D and a decoy IP address (-D 192.2.1.60). Lastly my target IP address (45.33.32.156) 
+Used -sS to do a stealth scan. -D and a decoy IP address (-D 192.2.1.60). Lastly my target IP address (45.33.32.156) 
 
 While scanning, it will send packets that I'm the source. It will aslo send a duplicate and change the source to 192.2.1.60. Someone checking traffic on the network will see an increase of traffic from all these hosts. Decoy is sending packets from multiple decoy IP addresses.   
 
