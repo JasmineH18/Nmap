@@ -17,6 +17,22 @@ Another option for shorten information as a guide. Screenshot https://imgur.com/
 In the terminal:
 nmap --help
 
+-O enables OS detection. This feature can detect operating system the target host is using. 
+
+In the terminal:
+sudo nmap -O 45.33.32.205 -v
+
+It pinged the host to check if it's active. Checked for open ports using TCP three-way handshake, but it's doing a stealth scan. Lastly it will guess what OS it's using. -v revealed more information.
+
+Results
+Device type: VoIP phone|webcam|specialized
+Running: Grandstream embedded, Garmin embedded, 2N embedded
+OS CPE: cpe:/h:grandstream:gxp1105 cpe:/h:garmin:virb_eliite cpe:/h:2n:helios
+Aggressive OS guesses: Grandstream GXP1105 VoIP phone, Garmin Virb Elite action camera, 2N Helios IP VoIP doorbell
+
+Screenshot: https://imgur.com/BFOKqu7
+
+
 
 
 
