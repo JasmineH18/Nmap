@@ -1,1 +1,18 @@
+Resources Used:
+-https://www.virtualbox.org/wiki/Downloads
+-https://www.kali.org/get-kali/#kali-platforms
+-Networkchuck https://www.youtube.com/watch?v=4t4kBkMsDbQ
+-https://nmap.org/book/man.html
 
+Environments Used:
+-Kali Linux in Virtualbox
+
+Started Kali Linux virtual machine and opened Nmap. This project will be on using a decoy using Nmap.
+
+Opened an extra for nmap manual. This will list all the commands I can use and the description for it. Screenshot https://imgur.com/mBIUIob
+In the terminal:
+man nmap
+
+Another option for shorten information as a guide. Screenshot https://imgur.com/tsVmjxz 
+In the terminal:
+nmap --help
