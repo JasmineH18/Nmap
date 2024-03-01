@@ -22,11 +22,28 @@ NSE is short for Nmap Scripting Engine and is a very powerful feature. NSE Scrip
 NOTE: It's advisable to never run scripts from a third party, unless you trust the authors. Scripts are not run in a sandbox.
 
 In the terminal: 
-sudo nmap --scripts vuln 
+sudo nmap --script vuln 45.33.32.156
+
+--script allows me to select specific scripts or script categories against target hosts.
+vuln will check for all known vulnerabilities.
+
+Depending on the results, you may see CVE. CVE is short for Common Vulnerabilitie and Exposure. It is a reference for publicly known vulnerabilities and exposures. The webiste is https://cve.mitre.org/
+
+Results: 
+Found the following possible CSRF vulnerabilities:
+
+  Path: http://scanme.nmap.org:80/
+  form id: nst-head-search
+  Form action: /search/
+
+  Path: http://scanme.nmap.org:80/
+  form id: nst-foot-search
+  Form action: /search/
 
 
+CSRF is short for Cross-Site Request Forgery. It's a web security vulnerability. An attacker will trick an authenticated user to make a malicious request. You can learn more on https://owasp.org/www-community/attacks/csrf
 
-
+Screenshot: https://imgur.com/pEDlHaq
 
 
 
