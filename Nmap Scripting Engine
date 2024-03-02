@@ -40,7 +40,6 @@ Found the following possible CSRF vulnerabilities:
   form id: nst-foot-search
   Form action: /search/
 
-
 CSRF is short for Cross-Site Request Forgery. It's a web security vulnerability. An attacker will trick an authenticated user to make a malicious request. You can learn more on https://owasp.org/www-community/attacks/csrf
 
 Screenshot: https://imgur.com/pEDlHaq
