@@ -7,7 +7,7 @@ Resources Used:
 Environments Used:
 -Kali Linux in Virtualbox
 
-Started Kali Linux virtual machine and opened Nmap. This project will be on port Nmap scripts using Nmap.
+Started Kali Linux virtual machine and opened Nmap. This project will be on Nmap Scripting Engine with vulnerability scanning using Nmap.
 
 Opened an extra for nmap manual. This will list all the commands I can use and the description for it. Screenshot https://imgur.com/mBIUIob
 In the terminal:
@@ -44,5 +44,67 @@ CSRF is short for Cross-Site Request Forgery. It's a web security vulnerability.
 
 Screenshot: https://imgur.com/pEDlHaq
 
+
+HTTP Scripts
+
+Example 1
+In the terminal:
+nmap -sV --script http-csrf 45.33.32.213 -v
+
+-sV: Will tell us the service/version info
+--script: To start a script
+http-csrf: This is the script number 
+45.33.32.213: The target 
+Screenshots: https://imgur.com/Jxa1jGO, https://imgur.com/undefined
+
+Example 2
+In the terminal:
+nmap -p 80,443 --script http-apache-server-status 45.33.32.222/24 -v
+
+-p: Specify which port to scan for. 
+--script: To start a script
+http-apache-server-status: This script will look for misconfigured apchahe web servers and will give information. 
+
+45.33.32.222/24: The target 
+Results: 45.33.32.17 showed a misconfigured apchahe web server
+Screenshots: https://imgur.com/vdEGl1V, https://imgur.com/uLaeShn
+
+Example 3
+In the terminal:
+nmap -p 80,443 --script http-methods 45.33.32.17 -v
+
+-p: Specify which port to scan for. 
+--script: To start a script
+http-methods: This script will find what options are available from certain web servers.
+
+45.33.32.17: The target
+Screeshot: https://imgur.com/cQvN8Yl
+Results: The script scan returned a trace method. This can lead to the disclosure of sensitive information. This can be an Internal authentication header appended by reverse proxies or other information that you can take and use a step further. 
+
+Example 4:
+In the terminal:
+nmap -p80,443 --script http-errors 45.33.32.11
+
+-p: Specify which port to scan for. 
+--script: To start a script
+http-errors:  This script will crawl through the website and look for any error pages it can find. 
+
+45.33.32.11: The target
+Screeshot: https://imgur.com/pc9Mn2u
+Results: It found an error message in port 443. Error Code: 404
+
+Example 5:
+In the terminal:
+nmap -p 80,443 --script http-grep.nse 45.33.32.5
+
+-p: Specify which port to scan for. 
+--script: To start a script
+http-grep.nse: This script goes out in spiders or crawls a website and attempts to find on the various pages of the website information. By default, it will look for IP addresses and email addresses. Also look for first name and others.   
+
+45.33.32.5: The target
+Screeshot: https://imgur.com/QNIv3ud
+Results:  It found an IP and and email on port 80
+
+Example 6: 
 
 
