@@ -83,7 +83,7 @@ Results: The script scan returned a trace method. This can lead to the disclosur
 
 Example 4:
 In the terminal:
-nmap -p80,443 --script http-errors 45.33.32.11
+nmap -p80,443 --script http-errors 45.33.32.11 -v
 
 -p: Specify which port to scan for. 
 --script: To start a script
@@ -95,7 +95,7 @@ Results: It found an error message in port 443. Error Code: 404
 
 Example 5:
 In the terminal:
-nmap -p 80,443 --script http-grep.nse 45.33.32.5
+nmap -p 80,443 --script http-grep.nse 45.33.32.5 -v
 
 -p: Specify which port to scan for. 
 --script: To start a script
@@ -103,8 +103,23 @@ http-grep.nse: This script goes out in spiders or crawls a website and attempts 
 
 45.33.32.5: The target
 Screeshot: https://imgur.com/QNIv3ud
-Results:  It found an IP and and email on port 80
+Results: It found an email address on port 80
 
 Example 6: 
+In the terminal: 
+nmap -p 80,443 --script http-wordpress-enum.nse 45.33.32.17 -v
+
+-p: Specify which port to scan for. 
+--script: To start a script
+http-wordpress-enum: This script will look for plugins that are running on the site.
+
+45.33.32.17: The target
+Screeshot: https://imgur.com/7KDk7sK
+Results: It found up to 100 themes/plugins in port 443.
+
+
+
+
+
 
 
