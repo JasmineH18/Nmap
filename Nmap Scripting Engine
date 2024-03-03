@@ -133,7 +133,7 @@ Screeshot: https://imgur.com/ZsO63aM
 Results: It show the IP the scan was running on. The IP is 45.33.32.156 and it matches to the same server. There is a A record that is a different server with a IP address 45.33.49.119.
  
 
-SMB Script:
+SMB Scripts:
 
 smb-protocol: This script will ask the servers what SMB protocol do you support.
 
@@ -144,6 +144,45 @@ nmap -sT -p 445 -iL iplist.txt --script smb-protocols
 -p: Specify which port to scan for. Port 445 is commonly associated with Server Message Block.
 -iL iplist.txt: This will read a list of target IP addresses from the file 'iplist.txt'
 --script: To start a script
+
+smb-security-mode: This script will check various information about the smb protocol authentication methods with security levels. The most important parameter to look for is the messaging signing. It will show if it's enabled or not. If a response show that it's not required, it's considered a vulnerability and it's a misconfiguration.    
+
+Example 2:
+nmap -n -sT 445 -iL iplist.txt --script smb-security-mode
+
+-n: This will not perform DNS resolution on the target IP addresses, and will speed up the scanning process
+-sT: Is a TCP connect scan. It's a full open scan.
+445: Associated with Server Message Block
+-iL iplist.txt: This will read a list of target IP addresses from the file 'iplist.txt'
+--script: To start a script
+
+
+SSL Scripts: 
+
+ssl-enum-ciphers: This script will repeatedly try to initiate SSL and TLS connections with a host and each time it tries a new cipher while recording whether the host accepts it or not. The results should show the grade strength of A-F.
+
+Example 1: 
+In the terminal: 
+nmap -p 80,443 --script ssl-enum-ciphers 45.33.32.30 -v
+
+-p: Specify which port to scan for. 
+--script: To start a script
+45.33.32.30: The target
+Screeshots: https://imgur.com/WeeU6s4, https://imgur.com/Z3X92e3
+Results: It's running TLSv1.0, TLSv1.1, and TLSv1.2. Under each TLS version, it show the ciphers and the grade for it. Everthing from the results show all A's with no vulnerability.
+
+ssl-cert: This script will retrieve SSL certificates from servers and tells us the information of it.
+
+Example 2: 
+In the terminal: 
+nmap -p 80,443 --script ssl-cert 45.33.32.30 -v
+
+-p: Specify which port to scan for. 
+--script: To start a script
+45.33.32.30: The target
+Screeshots: https://imgur.com/RF782V4, https://imgur.com/HVMUdcZ
+Results: It shows the common name of the issuer, the valid date, the encrypted certificate, etc
+
 
 
 
