@@ -197,23 +197,6 @@ nmap -sV --script vulners 45.33.32.156 -v
 45.33.32.156: The target
 Screeshots: https://imgur.com/Dh1Qxcr, https://imgur.com/QMclfEH
 
-Script XML Export and Software Download
-
-I'm going to format the vulners scan result to look much cleaner by creating a Python script. First I'm going to export the script to .xml.
-
-In the terminal: 
-nmap -sV --script=vulners -oX 45.33.32.156.xml xxx.x.x.x
-
--sV: Will tell us the service/version info
---script=vulners: Specifies the script to be executed
--oX 45.33.32.156.xml: The output format of the file name
-xxx.x.x.x: The machine to save the .xml file to
-Screenshots: https://imgur.com/AKqpVSq, https://imgur.com/XE4IKRB
-
-
-
-
-
 
 
 
