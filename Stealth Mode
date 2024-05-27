@@ -29,6 +29,6 @@ Device 20 will not complete the TCP connection, which will not complete the thre
 In the terminal:
 Sudo nmap -sS -p 80,443,22,143,21 45.33.32.156/24 -v
 
-It can the entire network and the firewall was not alerted.
+It can scan the entire network and the firewall was not alerted.
 Screenshots: https://imgur.com/o1Ds2zX, https://imgur.com/nQjbbDM, https://imgur.com/OtpAhb3
 
